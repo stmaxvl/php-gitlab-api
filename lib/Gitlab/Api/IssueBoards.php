@@ -53,7 +53,7 @@ class IssueBoards extends AbstractApi
             'label_id' => $label_id
         );
 
-        return $this->get($this->getProjectPath($project_id, 'boards/'.$this->encodePath($board_id).'/lists'), $params);
+        return $this->post($this->getProjectPath($project_id, 'boards/'.$this->encodePath($board_id).'/lists'), $params);
     }
 
     /**
